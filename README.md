@@ -16,13 +16,7 @@ Then make sure you have the proper config files (examples provided):
 * `deploy-config.js` ([example](example-deploy-config.js))
 * `slack-config.js` ([example](example-slack-config.js))
 
-Then require and register this script, which adds a few useful gulp tasks, namely:
-
-* `slack-deploy-starting`
-* `push-to-s3`
-* `invalidate-cloudfront`
-* `slack-deploy-complete`
-* `deploy` (which runs the others in sequence)
+Then require and register this script, which adds a few useful gulp tasks:
 
 ```
 var gulp = require('gulp');
@@ -55,7 +49,11 @@ awsSpa.register(gulp, {
 });
 ```
 
-See the source for example config files.
+Finally, deploy your code!
+
+```
+gulp deploy --env=dev
+```
 
 ## Credits
 Mad props to gulp, gulp-awspublish, gulp-invalidate-cloudfront, and gulp-slack.
