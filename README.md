@@ -42,7 +42,7 @@ awsSpa.register(gulp, {
     pushToS3: true,
     invalidateCloudfront: true,
     deploy: {
-      preDeploy: ['clean', 'build']
+      preDeploy: ['clean', 'build'],
       postDeploy: []
     }
   }
